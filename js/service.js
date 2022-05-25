@@ -40,6 +40,7 @@ document.getElementById('open-form').addEventListener('submit', function (event)
     let postform = event.target;
     let title1 = document.getElementById('title1').value;
     let text = document.getElementById('text').value;
+    let image = document.getElementById('filename');
     // let file = document.getElementById('filename').value;
 
 
@@ -72,7 +73,28 @@ document.getElementById('open-form').addEventListener('submit', function (event)
     }
 
     if (Object.keys(errors).length == 0) {
-        createservice();
+
+        mainDiv.classList.add('activepost');
+
+
+
+        let servicetitle = document.createElement('h2');
+        servicetitle.classList.add('service-title');
+        servicetitle.innerHTML = title1;
+        mainDiv.appendChild(servicetitle);
+
+        let servicediscript = document.createElement('p');
+        servicediscript.classList.add('service-descript');
+        servicediscript.innerHTML = text;
+        mainDiv.appendChild(servicediscript);
+
+        let serviceimage = document.createElement('img');
+        serviceimage.classList.add('service-image');
+        serviceimage.setAttribute('src', `img/${image.files[0].name}`);
+        mainDiv.appendChild(serviceimage);
+
+        form.classList.remove('activeform');
+
     }
 
 });
@@ -85,24 +107,24 @@ let savebtn = document.getElementById('save-btn');
 let mainDiv = document.getElementById('post');
 
 
-function createservice() {
-    let serviceDiv = document.createElement('div');
-    serviceDiv.classList.add('service-div');
+// function createservice(title1, text) {
+//     let serviceDiv = document.createElement('div');
+//     serviceDiv.classList.add('service-div');
 
-    let servicetitle = document.createElement('h2');
-    servicetitle.innerHTML = title1;
-    serviceDiv.appendChild(servicetitle);
+//     let servicetitle = document.createElement('h2');
+//     servicetitle.innerHTML = title1;
+//     serviceDiv.appendChild(servicetitle);
 
-    let servicediscript = document.createElement('p');
-    servicediscript.classList.add('service-description');
-    servicediscript.innerHTML = text;
-    serviceDiv.appendChild(servicediscript);
-    mainDiv.appendChild(serviceDiv);
+//     let servicediscript = document.createElement('p');
+//     servicediscript.classList.add('service-description');
+//     servicediscript.innerHTML = text;
+//     serviceDiv.appendChild(servicediscript);
+//     mainDiv.appendChild(serviceDiv);
 
-    form.classList.remove('activeform');
+//     form.classList.remove('activeform');
 
-}
-savebtn.addEventListener('click', createservice);
+// }
+// savebtn.addEventListener('click', createservice);
 
 
 

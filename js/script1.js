@@ -204,15 +204,15 @@ function createpost(item) {
     view.setAttribute('data-id', item.id);
     divwrapper.appendChild(view);
 
-    let image = document.createElement('img');
-    image.setAttribute('src', item.image);
-    image.setAttribute('alt', 'server-image');
-    image.append = item.image;
-    image.classList.add('server-img');
+    // let image = document.createElement('img');
+    // image.setAttribute('src', item.image);
+    // image.setAttribute('alt', 'server-image');
+    // image.append = item.image;
+    // image.classList.add('server-img');
 
     divwrapper.appendChild(h2tag);
     divwrapper.appendChild(h3tag);
-    divwrapper.appendChild(image);
+    // divwrapper.appendChild(image);
 
 
 
@@ -234,7 +234,7 @@ function openoverlay(id) {
     let url = `https://api.npoint.io/44c1c313d40c0811ad19?fbclid=IwAR0Wv5wKUMcuLUeJBwJZBdiEGIb_AEb-8J5JYVHPQhNjlGjndvxXcYmoVs0/posts/${id}`;
 
     ajax(url, function (data) {
-        overlayfunction(data);
+        overlayfunction(data[id]);
 
     });
 }
@@ -250,8 +250,16 @@ function overlayfunction(item) {
     descript.innerText = item.description;
     descript.classList.add('descript');
 
-    // content.appendChild(image);
+    let image = document.createElement('img');
+    image.setAttribute('src', item.image);
+    image.append = item.image;
+    image.classList.add('server-img');
+
+
+    content.appendChild(image);
     content.appendChild(descript);
+
+
 
 
 }
