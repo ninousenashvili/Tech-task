@@ -1,0 +1,731 @@
+body {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fff;
+}
+
+/* header-top styles*/
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+    background-color: #1f232b;
+
+}
+
+.social-menu {
+    max-width: 300px;
+    width: 100%;
+}
+
+.social-ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.social-li {
+    font-size: 12px;
+}
+
+
+.search-block {
+    display: flex;
+    gap: 10px;
+
+}
+
+.search {
+    border-radius: 12px;
+    height: 23px;
+    padding: 10px;
+    outline: none;
+    background-color: white;
+    font-weight: bolder;
+
+}
+
+.btn-search {
+    cursor: pointer;
+    background-color: rgba(52, 74, 113, 0.85);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    width: 60px;
+    height: 23px;
+
+}
+
+.btn-search:hover {
+    background-color: white;
+    color: rgba(52, 74, 113, 0.85);
+    transition: 0.5s;
+}
+
+/* header styles */
+
+.logo {
+    width: 75px;
+    height: 50px;
+}
+
+.ul-list {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    /* height: 100%; */
+
+}
+
+a {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
+
+
+a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+
+
+.active {
+    border-bottom: 3px solid white;
+}
+
+
+.navigation {
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 40px;
+    align-items: center;
+    background-color: rgba(52, 74, 113, 0.85);
+    width: 100%;
+    height: 70px;
+    padding-left: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+
+}
+
+
+/*social media  icon-styles */
+
+.fa-brands {
+    font-size: 10px;
+
+}
+
+.fa-brands:hover {
+    opacity: 50%;
+    transition: 0.5 s;
+}
+
+
+
+
+/* slider styles */
+
+.slide {
+    width: 100%;
+}
+
+.image-slider {
+    background-image: url();
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    z-index: 1;
+
+
+}
+
+.slader-wrapper {
+    position: relative;
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.arrow:hover {
+    color: rgb(9, 9, 9);
+    transition: 0.5s;
+}
+
+.arrow-left {
+    left: 30px;
+}
+
+.arrow-right {
+    right: 30px;
+}
+
+.slider-title {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    /* left: 35%;
+    top: 40%; */
+    /* background-color: #1f232ba8; */
+    border-radius: 12px;
+    text-transform: uppercase;
+    animation: mymove 5s;
+    animation-direction: alternate;
+
+}
+
+@keyframes mymove {
+    from {
+        left: 0;
+        top: 0;
+    }
+
+    to {
+        top: 0;
+        left: 30px;
+    }
+}
+
+.dot {
+    width: 30px;
+    height: 7px;
+    background-color: rgb(91, 81, 81);
+    cursor: pointer;
+    margin: 5px;
+}
+
+.dot:hover {
+    background-color: white;
+    transition: 0.5s;
+}
+
+.dots {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* server post styles */
+.post-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 0 auto;
+    max-width: 1007px;
+    width: 100%;
+    margin-top: 30px;
+
+
+}
+
+.server-post {
+    background-color: #3B5998;
+    opacity: 80%;
+    color: white;
+    max-width: 450px;
+    width: 100%;
+    height: 200px;
+    box-shadow: 2px 2px 2px 2px solid black;
+    position: relative;
+    padding-top: 10px;
+}
+
+.view-btn {
+    border-radius: 12px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    color: #357ebd;
+    font-size: 16px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    align-items: center;
+
+}
+
+.view-btn:hover {
+    color: white;
+    background-color: #1c366e;
+
+}
+
+.server-id {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+
+
+}
+
+.server-title {
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+
+
+}
+
+.overlay {
+    position: fixed;
+    left: 400px;
+    top: 100px;
+    width: 400px;
+    height: 400px;
+    background-color: #3B5998;
+    display: none;
+    color: white;
+}
+
+.overlay.active {
+    display: block;
+}
+
+#close {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+}
+
+.descript {
+    text-align: center;
+
+}
+
+.server-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 9px;
+    object-fit: cover;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+
+}
+
+.content {
+    position: relative;
+}
+
+/* footer styles */
+footer {
+
+    width: 100%;
+    background-color: black;
+    opacity: 80%;
+    padding-top: 15px;
+    margin-top: 50px;
+
+}
+
+.footer-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+
+
+}
+
+.bottom-footer {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    background: rgba(76, 75, 75, 0.542);
+    opacity: 50%;
+    padding: 5px;
+    margin-top: 10px;
+
+
+}
+
+.ftr-bottom-text {
+    color: white;
+    font-size: 12px;
+
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+
+
+}
+
+.ftr-icon {
+    color: white;
+    font-size: 25px;
+
+}
+
+.ftr-icon-block {
+    background-color: #3B5998;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.footer-p {
+    color: white;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.ftr-title {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+
+
+}
+
+.ftr-logo {
+    width: 145px;
+    height: 100px;
+}
+
+.contact-word {
+    color: white;
+    font-size: 12px;
+
+}
+
+.contact-icons {
+    display: flex;
+    gap: 14px
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+
+.fa-regular {
+    color: white;
+}
+
+.fa-phone {
+    color: white;
+}
+
+.fa-location-dot {
+    color: white;
+}
+
+
+.first-section {
+
+    width: 100%
+}
+
+
+
+
+
+/* Second page- modal window (form) styles */
+.main-section {
+    margin: 0 auto;
+    max-width: 1051px;
+    width: 100%;
+
+
+}
+
+.open-form {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 2px rgb(77, 74, 74);
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 901;
+}
+
+
+
+.activeform {
+    display: block;
+}
+
+.add-btn {
+
+    background-color: rgb(52, 74, 113);
+    color: white;
+    max-width: 200px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+}
+
+
+.add-btn:hover {
+    background-color: rgba(52, 74, 113, 0.85);
+    transition: 0.5 s;
+}
+
+.head-title {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 22px;
+
+
+}
+
+.form-x {
+    color: rgb(90, 88, 88);
+    cursor: pointer;
+}
+
+.form-x:hover {
+    color: black;
+    font-size: larger;
+    transition: 0.5 s;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 15px;
+
+}
+
+/* 
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+
+} */
+
+.form-title {
+    font-size: 13px;
+    color: rgb(85, 82, 82);
+    margin-bottom: 10px;
+
+}
+
+.input-title {
+    max-width: 400px;
+    width: 100%;
+    font-size: 12px;
+    /* font-weight: bold; */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    outline: none;
+    border-color: rgb(173, 171, 171);
+    margin-bottom: 30px;
+}
+
+.input-field {
+    margin-bottom: 30px;
+    height: 200px;
+    width: 100%
+}
+
+
+
+.btn-div {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    gap: 10px;
+
+
+}
+
+#x-btn {
+    border: 1px solid transparent;
+    height: 30px;
+    width: 80px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 4px;
+    border-color: #357ebd;
+}
+
+#save-btn {
+    border: 1px solid transparent;
+    height: 30px;
+    width: 120px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 4px;
+    border-color: #357ebd;
+
+}
+
+
+
+#save-btn:hover,
+#x-btn:hover {
+    background-color: #357ebd;
+    color: white;
+    transition: 0.5 s;
+}
+
+#post {
+    width: 200px;
+    background-color: #357ebd;
+    height: 200px;
+}
+
+/* service post styles */
+
+.service-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1007px;
+    width: 100%;
+    justify-content: space-between;
+
+
+}
+
+.service1 {
+    display: flex;
+    max-width: 450px;
+    width: 100%;
+    background-color: rgba(196, 205, 202, 0.616);
+    box-shadow: 2px 2px 2px 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    gap: 10px;
+
+
+    /* position: relative; */
+
+}
+
+#post {
+    display: flex;
+    max-width: 450px;
+    width: 100%;
+    background-color: rgba(196, 205, 202, 0.616);
+    box-shadow: 2px 2px 2px 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.service-img {
+    max-width: 200px;
+    width: 100%;
+    max-height: 200px;
+    height: 100%;
+
+}
+
+.img-btn {
+    position: relative;
+}
+
+.service-img:hover {
+    opacity: 80%;
+}
+
+
+.servive-description {
+    max-width: 200px;
+    width: 100%;
+
+}
+
+.service-heading {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-btn {
+    border: none;
+    color: white;
+    font-size: 16px;
+    background-color: rgb(255, 149, 0);
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    cursor: pointer;
+
+}
+
+.service-btn:hover {
+
+    border: 3px solid white;
+    font-size: 12px;
+}
+
+.error-text {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}

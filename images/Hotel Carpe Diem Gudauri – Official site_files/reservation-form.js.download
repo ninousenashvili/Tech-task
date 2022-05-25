@@ -1,0 +1,99 @@
+(function($) {
+	"use strict";
+
+	if ($('.awe-reservation-date').length) {
+		var inputDateFormat = $('input[name=\'txtDateFormat\']').val();
+		var dateFormat = 'mm/dd/yy';
+
+		switch (inputDateFormat) {
+			case 'dd/mm/yyyy':
+				dateFormat = 'dd/mm/yy';
+			break;
+			case 'yyyy/mm/dd':
+				dateFormat = 'yy/mm/dd';
+			break;
+			case 'yyyy/dd/mm':
+				dateFormat = 'yy/dd/mm';
+			break;
+		}
+
+		$('.awe-reservation-date').datepicker('destroy');
+		$('.awe-reservation-date').datepicker({
+			dateFormat: dateFormat,
+      constrainInput: true,
+      minDate: 0,
+      // prevText: '<i class="hillter-icon-left-arrow"></i>',
+      // nextText: '<i class="hillter-icon-right-arrow"></i>',
+      buttonImageOnly: false,
+      beforeShow: function(input, inst) {
+        $('#ui-datepicker-div').addClass('awe-datepicker');
+      },
+
+      onSelect: function(dateText) {
+        if ($(this).hasClass('de-date')) {
+          dateText = dateText.replace(/\//g, '.');
+        }
+        $(this).next().val(dateText);
+      },
+		});
+	}
+
+	if ($(".awe-reservation-form").length) {
+		$(".awe-reservation-form").on('submit', function() {
+			var $form = $(this);
+			var check = true;
+			var dateInput = $form.find("input[name='startDate']");
+			var timeInput = $form.find("select[name='ResTime']");
+			var perInput = $form.find("input[name='partySize']");
+
+			// check date input
+			if (dateInput.val() == "") {
+				if (dateInput.parent().children('p').length) {
+					dateInput.parent().children('p').show();
+				} else {
+					var p = $('<p class="error">' + ReservationForm.textErrorDate + '</p>');
+					dateInput.parent().append(p);
+				}
+				// $form.find('.awe-calendar').addClass('has-error');
+				check = false;
+			} else {
+				dateInput.parent().children('p').hide();
+				// $form.find('.awe-calendar').removeClass('has-error');
+			}
+
+			// check time input
+			if (timeInput.val() == 0) {
+				if (timeInput.parent().children('p').length) {
+					timeInput.parent().children('p').show();
+				} else {
+					var p = $('<p class="error">' + ReservationForm.textErrorTime + '</p>');
+					timeInput.parent().append(p);
+				}
+				// $form.find('.bootstrap-select.awe-select > button').addClass('has-error');
+				check = false;
+			} else {
+				timeInput.parent().children('p').hide();
+				// $form.find('.bootstrap-select.awe-select > button').removeClass('has-error');
+			}
+
+			// check pers input
+			if (perInput.val() == "") {
+				if (perInput.parent().children('p').length) {
+					perInput.parent().children('p').show();
+				} else {
+					var p = $('<p class="error">' + ReservationForm.textErrorPerson + '</p>');
+					perInput.parent().append(p);
+				}
+				// perInput.addClass('has-error');
+				check = false;
+			} else {
+				perInput.parent().children('p').hide();
+				// perInput.removeClass('has-error');
+			}
+
+			if (!check)
+				return false;
+		});
+	}
+
+})(jQuery);

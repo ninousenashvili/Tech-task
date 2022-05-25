@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/resetstyle.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Hotel Carpe Diem</title>
+</head>
+
+<body>
+    <header class="header-block">
+        <div class="header-top">
+            <div class="social-menu">
+                <ul class="social-ul">
+                    <li><a class="social-li">Follow us:</a></li>
+                    <li>
+                        <a href="https://www.facebook.com/%E1%83%91%E1%83%90%E1%83%95%E1%83%A8%E1%83%95%E1%83%97%E1%83%90-%E1%83%9E%E1%83%98%E1%83%A0%E1%83%9D%E1%83%95%E1%83%9C%E1%83%A3%E1%83%9A%E1%83%98-%E1%83%92%E1%83%90%E1%83%9C%E1%83%95%E1%83%98%E1%83%97%E1%83%90%E1%83%A0%E1%83%94%E1%83%91%E1%83%98%E1%83%A1-%E1%83%AA%E1%83%94%E1%83%9C%E1%83%A2%E1%83%A0%E1%83%98-Carpe-diem%E1%83%99%E1%83%90%E1%83%A0%E1%83%9E%E1%83%94-%E1%83%93%E1%83%98%E1%83%94%E1%83%9B-830945730579455/"
+                            target="_black">
+                            <i class="fa-brands fa-facebook ftr-icon" target="_blank"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-instagram ftr-icon" target="_blank"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="search-block">
+                <input class="search" type="text" placeholder="search for..." required>
+                <button class="btn-search" type="submit"> search</button>
+            </form>
+        </div>
+
+
+        <nav class="navigation">
+            <img class="logo" src="images//axali-logo.png" alt="logo">
+            <ul class="ul-list">
+                <li class="list"><a class="link" href="index.html">Main</a></li>
+                <li class="list"><a class="link active" href="service.html">Services</a>
+                </li>
+                <li class="list">
+                    <a class="link" href="#">about us</a>
+                </li>
+                <li class="list"><a class="link" href="#">Contact</a>
+                </li>
+
+            </ul>
+            <div class="humburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+    </header>
+    <section class="main-section">
+        <button class="add-btn" id="add-btn">Add New Service</button>
+        <!-- <div id="overlay" class="overlay"> -->
+        <form action="" method="POST" class="open-form" id="open-form">
+
+            <div class="heading">
+                <h4 class="head-title">Create New service</h4>
+                <div id="close-btn"><i class="fa-solid fa-x form-x"></i></div>
+            </div>
+
+            <hr>
+            <div class="post-form">
+                <label class="form-title" for="title1"> title*</label>
+                <input class="input-title" type="text" id="title1" name="title1" placeholder="Post title">
+                <span class="error-text" id="error_title1"></span>
+            </div>
+            <div>
+                <label class="form-title" for="text"> description*</label>
+                <textarea class="input-field" name="text" id="text"></textarea>
+                <span class="error-text" id="error_text"></span>
+            </div>
+            <!-- <div>
+                <label class="form-title" for="filename"> Image*</label>
+                <input type="file" id="filename" name="filename">
+                <!-- <span class="error-text" id="error_filename"></span> -->
+            </div>
+            <div class="btn-div">
+
+                <button type="reset" value="reset" class="x-btn" id="x-btn">reset</button>
+                <button type="submit" value="submit" id="save-btn">save changes</button>
+            </div>
+        </form>
+
+        <div class="service-wrapper">
+            <div class="service1">
+                <div class="post-text">
+                    <h2 class="service-heading">Cinema</h2>
+                    <p class="servive-description">At our cinema, all of our guests are welcome to watch movies in
+                        Russian or English languages.
+                        Entrance is free of charge.</p>
+                </div>
+                <div class="img-btn">
+
+                    <img class="service-img" src="images/Cinema.jpg" alt="cinema">
+                    <button class="service-btn"> view details</button>
+                </div>
+            </div>
+
+
+            <div class="service1">
+                <div class="post-text">
+                    <h2 class="service-heading">Meeting & Events</h2>
+                    <p class="servive-description">Whether your event is a board meeting for 5 people or a workshop with
+                        up to 35 participants, here we will gladly host your event.</p>
+
+                </div>
+                <div class="img-btn">
+
+                    <img class="service-img" src="images//Conference-1-570x400.jpg" alt="meeting room">
+                    <button class="service-btn"> view details</button>
+                </div>
+            </div>
+
+
+            <div id="post">
+
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-block">
+            <div class="ftr-left-block">
+                <img class="ftr-logo" src="images/axali-logo.png" alt="hotel-logo">
+            </div>
+            <div class="ftr-middle-block">
+                <h4 class="ftr-title"> Follow Us </h4>
+                <div class="icons">
+                    <div class="ftr-icon-block">
+                        <a href="https://www.facebook.com/%E1%83%91%E1%83%90%E1%83%95%E1%83%A8%E1%83%95%E1%83%97%E1%83%90-%E1%83%9E%E1%83%98%E1%83%A0%E1%83%9D%E1%83%95%E1%83%9C%E1%83%A3%E1%83%9A%E1%83%98-%E1%83%92%E1%83%90%E1%83%9C%E1%83%95%E1%83%98%E1%83%97%E1%83%90%E1%83%A0%E1%83%94%E1%83%91%E1%83%98%E1%83%A1-%E1%83%AA%E1%83%94%E1%83%9C%E1%83%A2%E1%83%A0%E1%83%98-Carpe-diem%E1%83%99%E1%83%90%E1%83%A0%E1%83%9E%E1%83%94-%E1%83%93%E1%83%98%E1%83%94%E1%83%9B-830945730579455/"
+                            target="_blank">
+                            <i class="fa-brands fa-facebook ftr-icon" target="_blank"></i>
+                        </a>
+                    </div>
+                    <div class="ftr-icon-block">
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-instagram ftr-icon" target="_blank"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ftr-right-block">
+                <h4 class="ftr-title"> Contact Info</h4>
+                <div class="contact-info">
+                    <div class="contact-icons">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p class="contact-word">Email: marketing@carpediem.ge</p>
+                    </div>
+                    <div class="contact-icons">
+                        <i class="fa-solid fa-phone"></i>
+                        <p class="contact-word">+995 514 510 770</p>
+                    </div>
+                    <div class="contact-icons">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class="contact-word"> Address: 4702 Gudauri, GEORGIA </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <h2 class="ftr-bottom-text">Copyright &copy by Hotel Carpe Diem <span id="year"></span></h2>
+        </div>
+
+    </footer>
+    <script src="js/service.js"></script>
+</body>
+
+</html>
