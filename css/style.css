@@ -682,7 +682,8 @@ section {
     display: flex;
     max-width: 450px;
     width: 100%;
-    background-color: rgba(97, 135, 158, 0.989);
+    background-color: #3B5998;
+    opacity: 90%;
     box-shadow: 5px 5px 5px 5px rgb(75, 77, 112);
     padding: 10px;
     margin-bottom: 20px;
@@ -699,7 +700,8 @@ section {
     display: flex;
     max-width: 450px;
     width: 100%;
-    background-color: rgba(97, 135, 158, 0.989);
+    background-color: #3B5998;
+    opacity: 90%;
     box-shadow: 2px 5px black;
     padding: 10px;
     margin-bottom: 20px;
