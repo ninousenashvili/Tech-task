@@ -262,8 +262,8 @@ a:hover {
 .view-btn {
     border-radius: 12px;
     border: none;
-    width: 100px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
     background-color: white;
     color: #357ebd;
     font-size: 16px;
@@ -393,6 +393,8 @@ a:hover {
     width: 100%;
     padding-left: 40px;
     padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     background-color: #1f232b;
 
     position: fixed;
@@ -795,10 +797,11 @@ section {
     color: white;
     font-size: 16px;
     background-color: rgb(255, 149, 0);
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 40px;
+    border-radius: 12px;
     position: absolute;
-    bottom: 0px;
+    bottom: -5px;
     left: 0px;
     cursor: pointer;
 
