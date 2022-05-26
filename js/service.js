@@ -101,6 +101,9 @@ document.getElementById('open-form').addEventListener('submit', function (event)
     }
 
 });
+
+
+// document.querySelector('.open-form').addEventListener('submit', addpost);
 // function creating new service-post - visible on page
 
 
