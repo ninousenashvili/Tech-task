@@ -81,6 +81,8 @@
 /* service section */
 
 @media(max-width:640px) {
+
+
     .service-wrapper {
         display: flex;
         flex-direction: column;
@@ -91,7 +93,7 @@
         margin: 0 auto;
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
@@ -135,6 +137,24 @@
 
     }
 }
+
+/* server post */
+@media(max-width:1007px) {
+
+
+    .post-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1007px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
 
 /* footer styles */
 

@@ -1,4 +1,5 @@
 
+
 // service page
 
 // function open the modal window (form)
@@ -21,6 +22,8 @@ function closeoverlay() {
     let closeform = document.getElementById('close-btn');
     closeform.addEventListener('click', function () {
         form.classList.remove('activeform');
+        document.getElementById('title1').value = '';
+        document.getElementById('text').value = '';
 
 
     });

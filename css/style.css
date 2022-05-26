@@ -3,11 +3,13 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* background-color: rgb(227, 226, 238); */
     background-color: #7d818978;
-
+    margin-bottom: 400px;
 
 }
 
 /* header-top styles*/
+
+
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -113,9 +115,8 @@ a:hover {
     width: 100%;
     height: 70px;
     padding-left: 40px;
-    position: sticky;
-    top: 0;
     z-index: 900;
+
 
 }
 
@@ -147,6 +148,8 @@ a:hover {
     height: 550px;
     object-fit: cover;
     z-index: 1;
+
+
 
 
 }
@@ -234,7 +237,6 @@ a:hover {
 .post-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
     margin: 0 auto;
     max-width: 1007px;
     width: 100%;
@@ -253,6 +255,8 @@ a:hover {
     box-shadow: 5px 5px 5px 5px rgb(68, 65, 65);
     position: relative;
     padding-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 50px;
 }
 
 .view-btn {
@@ -305,12 +309,15 @@ a:hover {
     width: 100%;
     max-height: 300px;
     height: 100%;
-    border: 5px solid#3B5998;
+    /* border: 5px solid#3B5998;  */
     display: none;
-    background-color: #778BA5;
+    /* background-color: #778BA5; */
+    border: 3px solid white;
+    background-color: #3B5998;
     display: none;
     color: black;
     padding: 10px;
+    box-shadow: 2px 2px 2xp 2px #3B5998;
 
 }
 
@@ -374,8 +381,11 @@ a:hover {
     background-color: black;
     opacity: 80%;
     padding-top: 15px;
+    opacity: 80%;} */
 
-} */
+
+
+
 
 .footer-block {
     display: flex;
@@ -384,8 +394,9 @@ a:hover {
     padding-left: 40px;
     padding-right: 40px;
     background-color: #1f232b;
-    opacity: 80%;
-    flex-shrink: 0;
+
+    position: fixed;
+    bottom: 0;
 
 
 
@@ -397,10 +408,13 @@ a:hover {
     width: 100%;
     height: 20px;
     text-align: center;
-    background: rgba(76, 75, 75, 0.542);
+    background-color: #2a2f3c;
     opacity: 50%;
     padding: 5px;
     /* margin-top: 10px; */
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
 
 
 }
@@ -682,13 +696,14 @@ section {
     display: flex;
     max-width: 450px;
     width: 100%;
+    height: 150px;
     background-color: #3B5998;
     opacity: 90%;
     box-shadow: 5px 5px 5px 5px rgb(75, 77, 112);
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     /* flex-direction: row; */
-    gap: 10px;
+    margin-right: 10px;
     color: white;
 
 
@@ -700,13 +715,14 @@ section {
     display: flex;
     max-width: 450px;
     width: 100%;
+    height: 150px;
     background-color: #3B5998;
     opacity: 90%;
-    box-shadow: 2px 5px black;
+    box-shadow: 5px 5px 5px 5px rgb(75, 77, 112);
     padding: 10px;
     margin-bottom: 20px;
     /* flex-direction: row; */
-    gap: 10px;
+    margin-right: 10px;
     color: white;
     display: none;
 }
