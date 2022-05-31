@@ -316,8 +316,9 @@ a:hover {
     /* border: 5px solid#3B5998;  */
     display: none;
     /* background-color: #778BA5; */
-    border: 3px solid white;
-    background-color: #3B5998;
+    border: 3px solid rgb(28, 28, 28);
+    background: rgb(42, 39, 39);
+    background: linear-gradient(188deg, rgba(42, 39, 39, 1) 28%, rgba(48, 48, 79, 1) 65%, rgba(58, 104, 116, 1) 100%);
     display: none;
     color: black;
     padding: 10px;
@@ -533,7 +534,8 @@ section {
 }
 
 .open-form {
-    background-color: white;
+    background: rgb(162, 169, 179);
+    background: linear-gradient(188deg, rgba(162, 169, 179, 1) 28%, rgba(193, 198, 208, 1) 65%, rgba(234, 241, 218, 1) 100%);
     padding: 15px;
     max-width: 500px;
     width: 100%;
@@ -615,7 +617,8 @@ section {
 } */
 
 .form-title {
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: bold;
     color: rgb(85, 82, 82);
     margin-bottom: 10px;
 
@@ -719,6 +722,8 @@ section {
     margin-right: 10px;
     color: white;
 
+
+
 }
 
 
@@ -750,7 +755,9 @@ section {
     padding: 10px;
     border-top: 2px solid rgb(2, 9, 46);
     border-bottom: 2px solid rgb(2, 9, 46);
-    color: rgb(225, 214, 199)
+    color: rgb(225, 214, 199);
+    margin-bottom: 20px;
+
 }
 
 .service-heading {
@@ -768,20 +775,19 @@ section {
     color: white;
     font-size: 16px;
     background-color: rgb(255, 149, 0);
-    width: 120px;
+    width: 100px;
     height: 40px;
     border-radius: 12px;
-    position: absolute;
-    bottom: -5px;
-    left: 0px;
     cursor: pointer;
+    font-size: 14px;
+    padding: 2px;
+
 
 }
 
 .service-btn:hover {
 
-    border: 2px solid white;
-    font-size: 14px;
+    background-color: rgb(172, 105, 6);
     transition: 0.5;
 
 
@@ -790,7 +796,7 @@ section {
 .error-text {
     color: red;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
     display: block;
 
 }

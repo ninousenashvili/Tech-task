@@ -54,6 +54,8 @@ document.getElementById('open-form').addEventListener('submit', function (event)
     let mainDiv = document.getElementById('service-wrapper');
     let mainelements = document.createElement('div');
     mainelements.classList.add('service');
+    let deletebtn = document.createElement('button');
+    deletebtn.classList.add('service-btn');
 
     if (title1 == '' || title1.length > 25)
         errors.title1 = 'Title field cannot be empty and must be less than 25 symbols';
@@ -86,13 +88,22 @@ document.getElementById('open-form').addEventListener('submit', function (event)
         serviceimage.classList.add('service-img');
         serviceimage.setAttribute('src', `images/${image.files[0].name}`);
         mainelements.appendChild(serviceimage);
-        mainDiv.appendChild(mainelements);
+
 
         let servicediscript = document.createElement('p');
         servicediscript.classList.add('servive-description');
         servicediscript.textContent = text;
         mainelements.appendChild(servicediscript);
 
+        mainelements.appendChild(deletebtn);
+
+        deletebtn.textContent = 'DELETE';
+        deletebtn.addEventListener('click', function () {
+            mainelements.remove();
+        });
+
+
+        mainDiv.appendChild(mainelements);
 
 
 
