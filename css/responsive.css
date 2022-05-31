@@ -133,6 +133,10 @@
         align-items: center;
     }
 
+    .ftr-left-block {
+        display: none;
+    }
+
 
 }
 
