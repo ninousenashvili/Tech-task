@@ -307,8 +307,10 @@ a:hover {
 
 .overlay {
     position: fixed;
-    left: 10px;
-    top: 100px;
+    /* left: 0; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     max-width: 400px;
     width: 100%;
     max-height: 300px;
@@ -544,8 +546,9 @@ section {
     border-radius: 12px;
     box-shadow: 2px 2px 2px 2px rgb(77, 74, 74);
     position: fixed;
-    top: 0px;
-    left: 0px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     z-index: 901;
 }
