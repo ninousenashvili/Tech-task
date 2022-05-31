@@ -695,10 +695,15 @@ section {
 
 }
 
-.service1 {
+.service {
     display: flex;
-    max-width: 450px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 350px;
     width: 100%;
+    gap: 10px;
     /* height: 150px; */
     background-color: #3B5998;
     opacity: 90%;
@@ -709,21 +714,45 @@ section {
     margin-right: 10px;
     color: white;
 
-
-    /* position: relative; */
-
 }
 
-#post {
+.post {
     display: flex;
-    max-width: 450px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 350px;
     width: 100%;
-    height: 150px;
+    gap: 10px;
+    /* height: 150px; */
     background-color: #3B5998;
     opacity: 90%;
     box-shadow: 5px 5px 5px 5px rgb(75, 77, 112);
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    /* flex-direction: row; */
+    margin-right: 10px;
+    color: white;
+
+}
+
+
+#post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    gap: 10px;
+    /* height: 150px; */
+    background-color: #3B5998;
+    opacity: 90%;
+    box-shadow: 5px 5px 5px 5px rgb(75, 77, 112);
+    padding: 10px;
+    margin-bottom: 50px;
     /* flex-direction: row; */
     margin-right: 10px;
     color: white;
@@ -739,7 +768,8 @@ section {
     width: 100%;
     max-height: 200px;
     height: 100%;
-
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 2px rgb(111, 109, 153);
 }
 
 .service-descript {
