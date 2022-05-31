@@ -204,15 +204,10 @@ function createpost(item) {
     view.setAttribute('data-id', item.id);
     divwrapper.appendChild(view);
 
-    // let image = document.createElement('img');
-    // image.setAttribute('src', item.image);
-    // image.setAttribute('alt', 'server-image');
-    // image.append = item.image;
-    // image.classList.add('server-img');
 
     divwrapper.appendChild(h2tag);
     divwrapper.appendChild(h3tag);
-    // divwrapper.appendChild(image);
+
 
 
 
@@ -240,11 +235,7 @@ function openoverlay(id) {
 }
 function overlayfunction(item) {
 
-    // let image = document.createElement('img');
-    // image.setAttribute('src', item.image);
-    // image.setAttribute('alt', 'server-image');
-    // image.append = item.image;
-    // image.classList.add('server-img');
+
 
     let descript = document.createElement('p');
     descript.innerText = item.description;

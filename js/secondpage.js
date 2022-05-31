@@ -58,14 +58,14 @@ document.getElementById('open-form').addEventListener('submit', function (event)
     deletebtn.classList.add('service-btn');
 
     if (title1 == '' || title1.length > 25)
-        errors.title1 = 'Title field cannot be empty and must be less than 25 symbols';
+        errors.title1 = 'Title field cannot be empty and must include less than 25 symbols';
 
 
     if (text == '' || text.length > 100)
-        errors.text = 'Description field cannot be empty and cannot be more than 100 symblos';
+        errors.text = 'Description field cannot be empty and must include less than 100 symblos';
 
 
-    if (image.files == 0) {
+    if (image.files == '') {
         errors.image.files = 'please select image';
     }
 
