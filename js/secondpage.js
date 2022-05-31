@@ -65,8 +65,26 @@ document.getElementById('open-form').addEventListener('submit', function (event)
         errors.text = 'Description field cannot be empty and must include less than 100 symblos';
 
 
-    if (image.files == '') {
-        errors.image.files = 'please select image';
+
+
+    let myfiles = image.files;
+
+    if (myfiles.length > 0) {
+        let fileType = myfiles[0].type;
+        let fileSize = myfiles[0].size;
+
+        let maxsize = 1000 * 1024;
+        let supportedFileTypes = ['image/png', 'image/jpeg'];
+
+        if (!supportedFileTypes.includes(fileType)) {
+            errors.myfiles = 'Please select only jpg or png file type';
+        }
+
+        if (fileSize > maxsize) {
+            errors.myfiles = 'Please select image size less than 1 MB';
+        }
+    } else {
+        errors.myfiles = 'Please select image';
     }
 
 
