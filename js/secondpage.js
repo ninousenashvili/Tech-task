@@ -82,6 +82,11 @@ document.getElementById('open-form').addEventListener('submit', function (event)
         servicetitle.textContent = title1;
         mainelements.appendChild(servicetitle);
 
+        let serviceimage = document.createElement('img');
+        serviceimage.classList.add('service-img');
+        serviceimage.setAttribute('src', `images/${image.files[0].name}`);
+        mainelements.appendChild(serviceimage);
+        mainDiv.appendChild(mainelements);
 
         let servicediscript = document.createElement('p');
         servicediscript.classList.add('servive-description');
@@ -89,11 +94,7 @@ document.getElementById('open-form').addEventListener('submit', function (event)
         mainelements.appendChild(servicediscript);
 
 
-        let serviceimage = document.createElement('img');
-        serviceimage.classList.add('service-img');
-        serviceimage.setAttribute('src', `images/${image.files[0].name}`);
-        mainelements.appendChild(serviceimage);
-        mainDiv.appendChild(mainelements);
+
 
         document.getElementById('title1').value = '';
         document.getElementById('text').value = '';
