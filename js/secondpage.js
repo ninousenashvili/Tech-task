@@ -138,7 +138,7 @@ document.getElementById('open-form').addEventListener('submit', function (event)
 // display current date on footer
 
 let today = new Date();
-let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+let date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
 document.getElementById("year").append(date);
 
 

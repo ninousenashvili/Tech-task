@@ -148,7 +148,7 @@ document.querySelectorAll('.link').forEach(n => n.addEventListener('click', () =
 
 
 let today = new Date();
-let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+let date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
 document.getElementById("year").append(date);
 
 
