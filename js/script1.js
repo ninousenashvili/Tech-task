@@ -147,7 +147,9 @@ document.querySelectorAll('.link').forEach(n => n.addEventListener('click', () =
 // current date
 
 
-document.getElementById("year").innerHTML = (new Date().getFullYear());
+let today = new Date();
+let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+document.getElementById("year").append(date);
 
 
 // get server posts
