@@ -203,7 +203,7 @@ function createpost(item) {
     let view = document.createElement('button');
     view.innerText = 'View More';
     view.classList.add('view-btn');
-    view.setAttribute('data-id', item.id);
+    view.setAttribute('data-id', item.id - 1);
     divwrapper.appendChild(view);
 
 
